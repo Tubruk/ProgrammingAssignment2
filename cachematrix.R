@@ -1,12 +1,12 @@
-## Matrix structure that has the ability to cache inverse matrix calculation.
-## More details about each function below.
+## Global Description: Special Matrix structure that has the ability to cache
+## inverse matrix calculation. More details about each function below.
 
 
 ## This function creates a special "matrix" object that has the ability to
 ## cache its inverse.
 
 makeCacheMatrix <- function(matrix = matrix()) {
-        # Inverse Cache
+        # Inverse Cache variable
         inverseCached <- NULL
         
         # get/set Matrix functions
@@ -20,7 +20,7 @@ makeCacheMatrix <- function(matrix = matrix()) {
         getInverse <- function() inverseCached
         setInverse <- function(newInverse) inverseCached <<- newInverse
         
-        # Associate functions
+        # Associate previous functions with their name
         list(get = get,
              set = set,
              getInverse = getInverse,
